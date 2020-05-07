@@ -49,8 +49,6 @@ try {
   if (useGlobalLibvips) {
     const globalLibvipsVersion = libvips.globalLibvipsVersion();
     npmLog.info('sharp', `Detected globally-installed libvips v${globalLibvipsVersion}`);
-    npmLog.info('sharp', 'Building from source via node-gyp');
-    process.exit(1);
   } else if (libvips.hasVendoredLibvips()) {
     npmLog.info('sharp', `Using existing vendored libvips v${minimumLibvipsVersion}`);
   } else {
